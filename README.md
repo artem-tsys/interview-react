@@ -1,29 +1,37 @@
-# Next.js + Jest
+# Interview Boilerplate
 
-This example shows how to configure Jest to work with Next.js.
+## Boilerplate
 
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript.
+Мы подготовили репозитории для ускорения развертывания и конфигурации библиотек. Они содержат следующий стек:
+- nextjs
+- react
+- redux
+- redux-logic
+- axios
+- formik
+- yup
+- antd
+- jest
+- @testing-library/react
 
-## How to Use
+Используйте данные репозитории для создания своей сборки, если необходимо добавить/изменить что-то для решения задания.
 
-Quickly get started using [Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!
+## Stubs
 
-In your terminal, run the following command:
+Папка views/stubs содержит стабы для модулей, которые необходимо реализовать.
 
-```bash
-npx create-next-app --example with-jest with-jest-app
-```
+## Available Scripts
 
-```bash
-yarn create next-app --example with-jest with-jest-app
-```
+In the project directory, you can run:
 
-```bash
-pnpm create next-app --example with-jest with-jest-app
-```
+### `yarn dev`
 
-## Run Jest Tests
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-```bash
-npm test
-```
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `yarn test`
+
+Launches the test runner in the interactive watch mode.
