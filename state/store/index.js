@@ -1,17 +1,14 @@
-import { createStore, applyMiddleware } from "redux";
-import { createLogicMiddleware } from "redux-logic";
 import { createWrapper } from "next-redux-wrapper";
-import { composeWithDevTools } from "redux-devtools-extension";
-
-import conceptsOperations from "../concepts/operationsRoot";
 import rootReducer from "./reducer";
+import {middlewares} from './middleware';
+import {configureStore} from '@reduxjs/toolkit';
 
-const configureStore = () => {
-  const middlewareOperations = createLogicMiddleware([...conceptsOperations]);
-  const middlewares = applyMiddleware(middlewareOperations);
-  const enhancer = composeWithDevTools(middlewares);
+const createStore = (initState = {}) => (
+  configureStore({
+    reducer: rootReducer,
+    preloadedState: initState,
+    middleware: middlewares
+  })
+);
 
-  return createStore(rootReducer, enhancer);
-};
-
-export default createWrapper(configureStore);
+export default createWrapper(createStore);
