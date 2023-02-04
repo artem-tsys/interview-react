@@ -4,11 +4,12 @@ const { SUBMIT } = exampleSlice.actions;
 
 export const exampleMiddleware = (store) =>
   (next) =>
-    (action) => {
+    async (action) => {
       const { dispatch, getState } = store;
+
       next(action);
-      switch (action) {
-        case SUBMIT: {
+      switch (action.type) {
+        case SUBMIT.type: {
           break;
         }
         default:
